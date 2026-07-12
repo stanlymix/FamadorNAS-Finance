@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amador Finance Hub — Personal Finance Application</title>
+<meta name="description" content="Amador Finance Hub is a personal, single-user financial management application. Privacy policy and data practices.">
+<style>
+  :root{
+    --bg-0:#16191d; --bg-1:#1e2227; --bg-2:#262b31; --bg-3:#2f353c;
+    --line:#3a4149; --line-soft:#2c3238;
+    --txt-0:#d7dbdf; --txt-1:#9aa3ab; --txt-2:#6b747d;
+    --accent:#7fb2c9; --ok:#8a949c; --warn:#d9a441; --alarm:#cf5b4c; --standby:#6d8fae;
+    --mono:"Consolas","Cascadia Mono","Roboto Mono",monospace;
+    --sans:"Segoe UI",system-ui,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg-0);color:var(--txt-0);font-family:var(--sans);font-size:15px;line-height:1.65}
+  header{background:var(--bg-1);border-bottom:2px solid var(--line);padding:14px 22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .plant-id{font-family:var(--mono);font-size:11px;color:var(--txt-2);letter-spacing:.08em;line-height:1.5}
+  .plant-id b{display:block;font-size:17px;color:var(--txt-0);letter-spacing:.12em}
+  .mark{width:44px;height:44px;background:var(--bg-2);border:1px solid var(--line);border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:bold;font-size:17px;color:var(--txt-0);letter-spacing:.06em}
+  .badge{margin-left:auto;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;display:inline-flex;align-items:center;gap:6px;color:var(--txt-1)}
+  .badge::before{content:"";width:9px;height:9px;border-radius:1px;background:var(--ok);display:inline-block}
+  main{max-width:860px;margin:0 auto;padding:28px 22px 60px}
+  section{background:var(--bg-1);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:2px;padding:22px 24px;margin-bottom:20px}
+  section.plain{border-top:1px solid var(--line)}
+  h1{font-size:20px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+  h2{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--txt-2);margin-bottom:14px;font-family:var(--mono)}
+  h3{font-size:14px;letter-spacing:.04em;margin:16px 0 6px;color:var(--txt-0)}
+  p{color:var(--txt-1);margin-bottom:10px}
+  strong{color:var(--txt-0);font-weight:600}
+  .lede{color:var(--txt-0);font-size:16px}
+  dl{display:grid;grid-template-columns:190px 1fr;gap:8px 18px;margin-top:6px}
+  dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-2);padding-top:2px}
+  dd{color:var(--txt-1)}
+  dd b{color:var(--txt-0);font-weight:600}
+  ul{margin:6px 0 10px 18px;color:var(--txt-1)}
+  li{margin-bottom:5px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .lang{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:2px;padding:4px 10px;display:inline-block;margin-bottom:16px;background:var(--bg-2)}
+  footer{max-width:860px;margin:0 auto;padding:0 22px 40px;font-family:var(--mono);font-size:11px;color:var(--txt-2);letter-spacing:.05em}
+  @media(max-width:640px){dl{grid-template-columns:1fr}dt{padding-top:8px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="mark">AF</div>
+  <div class="plant-id">
+    PERSONAL FINANCE · SINGLE USER
+    <b>AMADOR FINANCE HUB</b>
+  </div>
+  <span class="badge">PERSONAL USE ONLY</span>
+</header>
+
+<main>
+
+  <!-- ==================== ENGLISH ==================== -->
+  <span class="lang">EN · English</span>
+
+  <section>
+    <h1>Amador Finance Hub</h1>
+    <p class="lede">A personal, single-user financial management application operated by its owner for their own household finances. This application is not a commercial product, is not offered to the public, and has no users other than its owner.</p>
+    <dl>
+      <dt>Purpose</dt><dd>Personal budgeting, balance tracking, and transaction analysis for the owner's own bank accounts.</dd>
+      <dt>Users</dt><dd><b>One</b> — the application owner. No third-party users, no sign-ups.</dd>
+      <dt>Data aggregator</dt><dd>Bank connectivity is provided by <a href="https://plaid.com" rel="noopener">Plaid</a>. Bank credentials are never seen or stored by this application; institutions using OAuth authenticate directly with the bank.</dd>
+      <dt>Hosting</dt><dd>Self-hosted on the owner's private infrastructure. Not exposed as a public service.</dd>
+    </dl>
+  </section>
+
+  <section class="plain">
+    <h2>Data Access &amp; Use</h2>
+    <p>Through Plaid, this application accesses only the following data from the owner's linked accounts:</p>
+    <ul>
+      <li><strong>Account information</strong> — account names, types, and balances.</li>
+      <li><strong>Transactions</strong> — transaction history for budgeting and expense analysis.</li>
+    </ul>
+    <p>How this data is used:</p>
+    <ul>
+      <li>Displayed to the owner in private dashboards for personal budgeting and analysis.</li>
+      <li>Stored on the owner's private, self-hosted infrastructure.</li>
+    </ul>
+    <p>What is <strong>never</strong> done with this data:</p>
+    <ul>
+      <li>No selling, sharing, or transferring data to third parties.</li>
+      <li>No advertising, profiling, or commercial use of any kind.</li>
+      <li>No data collection from anyone other than the owner.</li>
+    </ul>
+  </section>
+
+  <section class="plain">
+    <h2>Privacy Policy</h2>
+    <p><strong>Scope.</strong> This application has a single user — its owner. It does not collect personal information from visitors of this page or from any third party.</p>
+    <p><strong>Data storage &amp; security.</strong> Financial data retrieved via Plaid is stored on the owner's private infrastructure, protected by TLS encryption in transit, access controls, and routine encrypted backups. Access tokens are stored securely and never exposed publicly.</p>
+    <p><strong>Data retention &amp; deletion.</strong> Data is retained only as long as useful for personal financial analysis and can be deleted by the owner at any time. Bank connections can be revoked at any time through the linked institution or via <a href="https://my.plaid.com" rel="noopener">Plaid Portal</a>.</p>
+    <p><strong>Third parties.</strong> The only third-party service processing financial data is Plaid, acting as data aggregator. See <a href="https://plaid.com/legal/#end-user-privacy-policy" rel="noopener">Plaid's End User Privacy Policy</a>.</p>
+  </section>
+
+  <section class="plain">
+    <h2>Contact</h2>
+    <p>For any inquiry regarding data privacy or security practices of this application, contact the owner at: <strong>CONTACT_EMAIL_HERE</strong></p>
+  </section>
+
+  <!-- ==================== ESPAÑOL ==================== -->
+  <span class="lang">ES · Español</span>
+
+  <section>
+    <h1>Amador Finance Hub</h1>
+    <p class="lede">Aplicación personal de gestión financiera, de un solo usuario, operada por su propietario para sus finanzas domésticas. No es un producto comercial, no se ofrece al público y no tiene usuarios distintos a su propietario.</p>
+    <dl>
+      <dt>Propósito</dt><dd>Presupuesto personal, seguimiento de saldos y análisis de transacciones de las cuentas bancarias del propietario.</dd>
+      <dt>Usuarios</dt><dd><b>Uno</b> — el propietario de la aplicación. Sin terceros, sin registros.</dd>
+      <dt>Agregador de datos</dt><dd>La conectividad bancaria la provee <a href="https://plaid.com" rel="noopener">Plaid</a>. Esta aplicación nunca ve ni almacena credenciales bancarias; las instituciones con OAuth autentican directamente con el banco.</dd>
+      <dt>Alojamiento</dt><dd>Auto-hospedada en infraestructura privada del propietario. No expuesta como servicio público.</dd>
+    </dl>
+  </section>
+
+  <section class="plain">
+    <h2>Acceso y uso de datos</h2>
+    <p>A través de Plaid, esta aplicación accede únicamente a los siguientes datos de las cuentas vinculadas del propietario:</p>
+    <ul>
+      <li><strong>Información de cuentas</strong> — nombres, tipos y saldos.</li>
+      <li><strong>Transacciones</strong> — historial de transacciones para presupuesto y análisis de gastos.</li>
+    </ul>
+    <p>Los datos <strong>no se venden, comparten ni transfieren</strong> a terceros, no se usan con fines publicitarios ni comerciales, y no se recolecta información de ninguna persona distinta al propietario.</p>
+  </section>
+
+  <section class="plain">
+    <h2>Política de privacidad</h2>
+    <p><strong>Almacenamiento y seguridad.</strong> Los datos financieros obtenidos vía Plaid se almacenan en infraestructura privada del propietario, protegidos con cifrado TLS en tránsito, controles de acceso y respaldos cifrados rutinarios.</p>
+    <p><strong>Retención y eliminación.</strong> Los datos se conservan solo mientras sean útiles para el análisis financiero personal y pueden eliminarse en cualquier momento. Las conexiones bancarias pueden revocarse en cualquier momento desde la institución vinculada o vía <a href="https://my.plaid.com" rel="noopener">Plaid Portal</a>.</p>
+    <p><strong>Contacto.</strong> Para consultas sobre privacidad o seguridad de datos: <strong>CONTACT_EMAIL_HERE</strong></p>
+  </section>
+
+</main>
+
+<footer>
+  AMADOR FINANCE HUB · PERSONAL USE · REV 1.0 · 2026-07-12
+</footer>
+
+</body>
+</html>
